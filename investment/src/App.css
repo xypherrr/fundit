@@ -1,0 +1,719 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* import { createGlobalStyle } from 'styled-components'; */
+/* import { mediaQueryMax767, mediaQueryMin768, mediaQueryMinMax } from '../helpers/constants'; */
+
+/* const GlobalStyles = createGlobalStyle` */
+/* ul {
+    list-style: none;
+  } */
+/* figure,
+  ul {
+    padding: 0px;
+    margin: 0px;
+  } */
+/**
+  * 1. Correct the line height in all browsers.
+  * 2. Prevent adjustments of font size after orientation changes in iOS.
+  */
+/* 
+  html {
+    -webkit-text-size-adjust: 100%; /* 2 */
+/* } */
+
+/**
+  * Remove the margin in all browsers.
+  */
+
+html,
+body {
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #333;
+  -webkit-tap-highlight-color: transparent;
+  @media screen and (max-width: 425px) {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/**
+    * Remove the gray background on active links in IE 10.
+    */
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  border-style: none;
+}
+
+img::selection {
+  background: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+    * Show the overflow in IE.
+    * 1. Show the overflow in Edge.
+    */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+    * Remove the inheritance of text transform in Edge, Firefox, and IE.
+    * 1. Remove the inheritance of text transform in Firefox.
+    */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+    * Correct the inability to style clickable types in iOS and Safari.
+    */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+    * Remove the inner border and padding in Firefox.
+    */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+    * Restore the focus styles unset by the previous rule.
+    */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+    * Remove the default vertical scrollbar in IE 10+.
+    */
+
+textarea {
+  overflow: auto;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Common class names to be added below */
+.root {
+  overflow-x: hidden;
+}
+.Ell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dB {
+  display: block;
+}
+.dN {
+  display: none;
+}
+.dIB {
+  display: inline-block;
+}
+.dIh {
+  display: inherit;
+}
+.dF {
+  display: flex;
+}
+.dIF {
+  display: inline-flex;
+}
+.dFA {
+  display: flex;
+  align-items: center;
+}
+.dIFA {
+  display: inline-flex;
+  align-items: center;
+}
+.f1 {
+  flex: 1;
+}
+.fdC {
+  flex-direction: column;
+}
+.fdR {
+  flex-direction: row;
+}
+.fdrR {
+  flex-direction: row-reverse;
+}
+.fs0 {
+  flex-shrink: 0;
+}
+.jcC {
+  justify-content: center;
+}
+.jcSA {
+  justify-content: space-around;
+}
+.jcSB {
+  justify-content: space-between;
+}
+.jcFE {
+  justify-content: flex-end;
+}
+.aiFE {
+  align-items: flex-end;
+}
+.aiFS {
+  align-items: flex-start;
+}
+.aiB {
+  align-items: baseline;
+}
+.boN {
+  border: none;
+}
+.baW {
+  background: white;
+}
+.br50 {
+  border-radius: 50%;
+}
+.cD {
+  cursor: default;
+}
+.cP {
+  cursor: pointer;
+}
+.fwL {
+  font-weight: 300;
+}
+.fwM {
+  font-weight: 500;
+}
+.fwSB {
+  font-weight: 600;
+}
+.fwB {
+  font-weight: bold;
+}
+.fwN {
+  font-weight: normal;
+}
+.fwW {
+  flex-wrap: wrap;
+}
+.fwNW {
+  flex-wrap: nowrap;
+}
+.h0 {
+  height: 0;
+}
+.h100 {
+  height: 100%;
+}
+.h100VH {
+  height: 100vh;
+}
+.hA {
+  height: auto;
+}
+.m0 {
+  margin: 0;
+}
+.mA {
+  margin: auto;
+}
+.o0 {
+  opacity: 0;
+}
+.o1 {
+  opacity: 1;
+}
+.ofC {
+  object-fit: cover;
+}
+.oH {
+  overflow: hidden;
+}
+.oxA {
+  overflow-x: auto;
+}
+.oxH {
+  overflow-x: hidden;
+}
+.oyA {
+  overflow-y: auto;
+}
+.oyH {
+  overflow-y: hidden;
+}
+.outN {
+  outline: none;
+}
+.peN {
+  pointer-events: none;
+}
+.peA {
+  pointer-events: all;
+}
+.pA {
+  position: absolute;
+}
+.pF {
+  position: fixed;
+}
+.pR {
+  position: relative;
+}
+.pS {
+  position: static;
+}
+.r0 {
+  right: 0;
+}
+.t0 {
+  top: 0;
+}
+.l0 {
+  left: 0;
+}
+.b0 {
+  bottom: 0;
+}
+.taC {
+  text-align: center;
+}
+.taL {
+  text-align: left;
+}
+.taR {
+  text-align: right;
+}
+.tdN {
+  text-decoration: none;
+}
+.ttC {
+  text-transform: capitalize;
+}
+.ttU {
+  text-transform: uppercase;
+}
+.vaM {
+  vertical-align: middle;
+}
+.vH {
+  visibility: hidden;
+}
+.w100 {
+  width: 100%;
+}
+.wsN {
+  white-space: nowrap;
+}
+.wosT {
+  -webkit-overflow-scrolling: touch;
+}
+.wBA {
+  word-break: break-all;
+}
+.zi0 {
+  z-index: 0;
+}
+.zi1 {
+  z-index: 1;
+}
+.link-text-hidden {
+  position: fixed;
+  left: -999px;
+}
+/*
+      Typography classnames to be used on elements like input/button or already defined elements
+      To be used only if Typography component is not usable
+    */
+/* .t1 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.title1};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.title1};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.title1};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.title1};
+      }
+    }
+    .t2 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.title2};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.title2};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.title2};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.title2};
+      }
+    }
+    .t3 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.title3};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.title3};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.title3};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.title3};
+      }
+    }
+    .h1 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.header1};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.header1};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.header1};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.header1};
+      }
+    }
+    .h2 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.header2};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.header2};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.header2};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.header2};
+      }
+    }
+    .h3 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.header3};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.header3};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.header3};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.header3};
+      }
+    }
+    .bt1 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.bodyText1};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.bodyText1};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.bodyText1};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.bodyText1};
+      }
+    }
+    .bt2 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.bodyText2};
+      line-height: ${({ theme }) => theme.lineSpace.Mobile.bodyText2};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.bodyText2};
+        line-height: ${({ theme }) => theme.lineSpace.Desktop.bodyText2};
+      }
+    }
+    .bt3 {
+      font-size: ${({ theme }) => theme.typeScale.Mobile.bodyText3};
+      ${mediaQueryMin768} {
+        font-size: ${({ theme }) => theme.typeScale.Desktop.bodyText3};
+      }
+    } */
+/* .c111 {
+      color: ${({ theme }) => theme.colors.Neutral[100]};
+    }
+    .c333 {
+      color: ${({ theme }) => theme.colors.TextAlpha};
+    }
+    .c41 {
+      color: ${({ theme }) => theme.colors.TextEpsilon};
+    } */
+.cAluminum {
+  color: #828d93;
+}
+.mb8 {
+  margin-bottom: 8px;
+}
+.mb12 {
+  margin-bottom: 12px;
+}
+.mb16 {
+  margin-bottom: 16px;
+}
+.mb18 {
+  margin-bottom: 18px;
+}
+.mb24 {
+  margin-bottom: 24px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.mb32 {
+  margin-bottom: 32px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.mb48 {
+  margin-bottom: 48px;
+}
+.mb64 {
+  margin-bottom: 64px;
+}
+.mt24 {
+  margin-top: 24px;
+}
+.mt16 {
+  margin-top: 16px;
+}
+.mb100 {
+  margin-bottom: 100px;
+}
+.mt100 {
+  margin-top: 100px;
+}
+/* ${mediaQueryMin768} {
+      .ldN {
+        display: none;
+      }
+      .lfwL {
+        font-weight: 300;
+      }
+    }
+    ${mediaQueryMinMax} {
+      .mdN {
+        display: none;
+      }
+    } */
+/* ${mediaQueryMax767} {
+      .xfwL {
+        font-weight: 300;
+      }
+      .xmb12 {
+        margin-bottom: 12px;
+      }
+      .xmb16 {
+        margin-bottom: 16px;
+      }
+      .xmb24 {
+        margin-bottom: 24px;
+      }
+      .xmb32 {
+        margin-bottom: 32px;
+      }
+      .xmt24 {
+        margin-top: 24px;
+      }
+      .xdN {
+        display: none;
+      }
+      .xmw296 {
+        max-width: 296px;
+      }
+    } */
+.tfw {
+  font-weight: 100;
+  /* ${mediaQueryMax767} {
+        font-weight: 300;
+      } */
+}
+
+.fs36 {
+  font-size: 36px;
+}
+.fs32 {
+  font-size: 32px;
+}
+.fs48 {
+  font-size: 48px;
+}
+.fs80 {
+  font-size: 80px;
+}
+.fs24 {
+  font-size: 24px;
+}
+.fs28 {
+  font-size: 28px;
+}
+.fs20 {
+  font-size: 20px;
+}
+.fs18 {
+  font-size: 18px;
+}
+.fs16 {
+  font-size: 16px;
+}
+.fs12 {
+  font-size: 12px;
+}
+
+.font-link {
+  font-family: "Mulish";
+}
+
+@media only screen and (min-width: 767px) {
+  .ldN {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* need to change all this class name, not justifying name right now */
+  .fs80 {
+    font-size: 32px;
+  }
+  .fs28 {
+    font-size: 18px;
+  }
+  .fs32{
+    font-size: 22px;
+  }
+  .fs36 {
+    font-size: 24px;
+  }
+  .fs24 {
+    font-size: 18px;
+  }
+  .xfS24 {
+    font-size: 24px;
+  }
+  .xdN {
+    display: none;
+  }
+  .xmb32 {
+    margin-bottom: 32px;
+  }
+  .xfdC {
+    flex-direction: column;
+  }
+}
+/* `;
+  
+  export default GlobalStyles; */
+
+/* faq */
+/* .faqs .faq .faq-question {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 43px;
+} */
+
+.faqs{
+  max-width: none !important;
+}
+
+.iconBackground {
+    background-color : '#26C296';
+    opacity :'20%';
+    height:'100px';
+    width: '100px';
+    border-radius: '20px';
+    justify-content: 'center';
+    align-items: 'center';
+    display: 'flex';
+}

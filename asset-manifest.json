@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/fundit/static/css/main.daa8244a.css",
+    "main.js": "/fundit/static/js/main.49967afc.js",
+    "static/js/787.cef12aae.chunk.js": "/fundit/static/js/787.cef12aae.chunk.js",
+    "static/media/fundt-logo.svg": "/fundit/static/media/fundt-logo.57cd614cc36c8f77752a7ffdd368a158.svg",
+    "index.html": "/fundit/index.html",
+    "main.daa8244a.css.map": "/fundit/static/css/main.daa8244a.css.map",
+    "main.49967afc.js.map": "/fundit/static/js/main.49967afc.js.map",
+    "787.cef12aae.chunk.js.map": "/fundit/static/js/787.cef12aae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.daa8244a.css",
+    "static/js/main.49967afc.js"
+  ]
+}
